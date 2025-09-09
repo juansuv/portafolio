@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias! | Juan Diego Suárez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta http-equiv="refresh" content="5;url=index.html">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">JDS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#about" class="nav-link">Sobre Mí</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experiencia</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="thank-you-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1>¡Mensaje Enviado Exitosamente!</h1>
+                <p class="thank-you-message">
+                    Gracias por contactarme. He recibido tu mensaje y te responderé 
+                    lo antes posible, normalmente dentro de las próximas 24 horas.
+                </p>
+                <div class="next-steps">
+                    <h3>¿Qué sigue ahora?</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> Revisaré tu mensaje cuidadosamente</li>
+                        <li><i class="fas fa-clock"></i> Te responderé dentro de 24 horas</li>
+                        <li><i class="fas fa-handshake"></i> Coordinaremos una llamada si es necesario</li>
+                    </ul>
+                </div>
+                <div class="contact-alternatives">
+                    <p>Si tienes algo urgente, también puedes contactarme directamente:</p>
+                    <div class="contact-options">
+                        <a href="mailto:juan.suva25@gmail.com" class="contact-option">
+                            <i class="fas fa-envelope"></i>
+                            juan.suva25@gmail.com
+                        </a>
+                        <a href="https://wa.me/573117627757" class="contact-option" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            +57 311 762 7757
+                        </a>
+                    </div>
+                </div>
+                <div class="return-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        Volver al Inicio
+                    </a>
+                    <a href="servicios.html" class="btn btn-secondary">
+                        <i class="fas fa-briefcase"></i>
+                        Ver Servicios
+                    </a>
+                </div>
+                <div class="auto-redirect">
+                    <p class="redirect-notice">
+                        <i class="fas fa-info-circle"></i>
+                        Serás redirigido automáticamente al inicio en <span id="countdown">5</span> segundos
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be loaded dynamically -->
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Countdown for auto-redirect
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            countdown--;
+            if (countdownElement) {
+                countdownElement.textContent = countdown;
+            }
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+        
+        // Analytics tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                page_title: 'Thank You Page',
+                page_location: window.location.href
+            });
+        }
+    </script>
+</body>
+</html>

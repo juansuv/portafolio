@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Diego Suárez | Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">JDS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#experience" class="nav-link">Experiencia</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#services" class="nav-link">Servicios</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hola, soy</span>
+                        <span class="name">Juan Diego Suárez</span>
+                        <span class="role">Software Engineer Fullstack</span>
+                    </h1>
+                    <p class="hero-description">
+                        Ingeniero de Sistemas con 6+ años de experiencia en desarrollo fullstack, 
+                        especializado en Python, Ruby, TypeScript y arquitecturas escalables.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Contactar</a>
+                        <a href="#about" class="btn btn-secondary">Conocer más</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img/perfil.jpeg" alt="Juan Diego Suárez - Software Engineer" class="profile-image" loading="lazy">
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">6+</span>
+                    <span class="stat-label">Años Experiencia</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Proyectos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Tecnologías</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Ingeniero de Sistemas y Computación con más de 6 años de experiencia en desarrollo full-stack, 
+                        especializado en Python, Ruby y TypeScript con frameworks como Django REST Framework, FastAPI, 
+                        Flask y Ruby on Rails, React.
+                    </p>
+                    <p>
+                        He diseñado e implementado API RESTful, microservicios escalables y procesos ETL, 
+                        aplicando principios SOLID y TDD/BDD. Mi experiencia abarca Big Data (Hadoop, Hive, Spark), 
+                        bases de datos SQL y NoSQL, además de metodologías ágiles con SCRUM.
+                    </p>
+                    <p>
+                        Actualmente curso una Maestría en Ingeniería de Sistemas, con investigación en NLP 
+                        para la detección de ideación suicida. Me destaco por liderazgo técnico y capacidad 
+                        para generar soluciones innovadoras.
+                    </p>
+                </div>
+                <div class="about-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Pereira, Colombia</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>juan.suva25@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+57 311 762 7757</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/juansuv" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juansuva/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experiencia Laboral</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Senior Software Engineer</h3>
+                        <h4>Datamart</h4>
+                        <span class="timeline-date">Feb 2025 - Sept 2025</span>
+                        <div class="job-description">
+                            <p>Desarrollo de soluciones fintech escalables para el Banco BCI, liderando la implementación de arquitecturas robustas y sistemas de alta disponibilidad.</p>
+                        </div>
+                        <ul class="achievements">
+                            <li>Diseñé y desarrollé APIs backend con <strong>Python</strong> y <strong>Django REST Framework</strong>, procesando +100K transacciones diarias</li>
+                            <li>Implementé microservicios con <strong>FastAPI</strong>, <strong>RESTFul</strong> y <strong>GraphQL</strong>, mejorando performance en 40%</li>
+                            <li>Construí interfaces dinámicas con <strong>React</strong> y <strong>Django Templates</strong> para dashboards financieros</li>
+                            <li>Configuré pipelines CI/CD en <strong>AWS</strong> y <strong>GCP</strong> con <strong>Docker</strong> y <strong>Kubernetes</strong></li>
+                            <li>Integré sistemas de <strong>NLP</strong> con <strong>Python</strong> y <strong>LangChain</strong> para análisis de datos bancarios</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-badge python" data-tooltip="Lenguaje principal para backend y Data Science">Python</span>
+                            <span class="tech-badge django" data-tooltip="Framework web robusto para aplicaciones escalables">Django</span>
+                            <span class="tech-badge ruby" data-tooltip="Framework para construir APIs con GraphQL">GraphQL</span>
+                            <span class="tech-badge fastapi" data-tooltip="Framework moderno para APIs de alto rendimiento">FastAPI</span>
+                            <span class="tech-badge react" data-tooltip="Biblioteca para interfaces de usuario interactivas">React</span>
+                            <span class="tech-badge aws" data-tooltip="Servicios en la nube para despliegue y escalabilidad">AWS</span>
+                            <span class="tech-badge docker" data-tooltip="Containerización para desarrollo y despliegue">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer</h3>
+                        <h4>BUK</h4>
+                        <span class="timeline-date">May 2022 - Dic 2024</span>
+                        <div class="job-description">
+                            <p>Desarrollo fullstack en plataforma de RRHH líder en Latinoamérica, trabajando con tecnologías modernas para optimizar procesos empresariales y mejorar la experiencia del usuario.</p>
+                        </div>
+                        <ul class="achievements">
+                            <li>Migré arquitecturas monolíticas a microservicios usando <strong>Ruby</strong> y <strong>Python</strong>, reduciendo tiempo de despliegue 60%</li>
+                            <li>Desarrollé backends escalables con <strong>Ruby on Rails</strong>, <strong>Django</strong> y <strong>FastAPI</strong></li>
+                            <li>Implementé APIs <strong>RESTful</strong> y <strong>GraphQL</strong> con <strong>Django REST Framework</strong> y Ruby</li>
+                            <li>Construí SPAs con <strong>React</strong>, <strong>TypeScript</strong> y <strong>Django Templates</strong></li>
+                            <li>Configuré entornos efímeros con <strong>Docker</strong> en <strong>AWS</strong> y <strong>GCP</strong>, optimizando testing</li>
+                            <li>Aplicé metodologías ágiles <strong>SCRUM</strong> con <strong>Python</strong> para automatización de procesos</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-badge python" data-tooltip="Lenguaje principal para backend y automatización">Python</span>
+                            <span class="tech-badge django" data-tooltip="Framework web para desarrollo rápido y seguro">Django</span>
+                            <span class="tech-badge ruby" data-tooltip="Framework web elegante y productivo">Ruby on Rails</span>
+                            <span class="tech-badge react" data-tooltip="Biblioteca para construir interfaces de usuario">React</span>
+                            <span class="tech-badge typescript" data-tooltip="JavaScript con tipado estático">TypeScript</span>
+                            <span class="tech-badge docker" data-tooltip="Plataforma de containerización">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer</h3>
+                        <h4>Logyca</h4>
+                        <span class="timeline-date">Ene 2021 - May 2022</span>
+                        <div class="job-description">
+                            <p>Liderazgo técnico en proyectos de analítica de retail para grandes cadenas, desarrollando soluciones de Big Data que impactaron directamente en la optimización de inventarios y reducción de desabastecimiento.</p>
+                        </div>
+                        <ul class="achievements">
+                            <li>Lideré el proyecto <strong>Analítica de Agotados</strong> con <strong>Python</strong> y <strong>Django</strong>, reduciendo desabastecimiento 35%</li>
+                            <li>Desarrollé procesos <strong>ETL</strong> masivos con <strong>Python</strong> (<strong>Pandas</strong>, <strong>PySpark</strong>, <strong>Django ORM</strong>)</li>
+                            <li>Implementé microservicios escalables con <strong>FastAPI</strong>, <strong>Flask</strong> y <strong>Django REST Framework</strong></li>
+                            <li>Migré arquitectura monolítica a microservicios usando <strong>Django</strong> y <strong>Python</strong>, mejorando disponibilidad 99.9%</li>
+                            <li>Construí dashboards con <strong>Angular</strong> y <strong>Django Templates</strong> para visualización de datos en tiempo real</li>
+                            <li>Integré bases de datos <strong>PostgreSQL</strong>, <strong>MongoDB</strong> y <strong>Oracle</strong> con <strong>Django ORM</strong></li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-badge python" data-tooltip="Lenguaje para ETL y procesamiento de datos">Python</span>
+                            <span class="tech-badge django" data-tooltip="Framework para aplicaciones web complejas">Django</span>
+                            <span class="tech-badge fastapi" data-tooltip="Framework rápido para APIs modernas">FastAPI</span>
+                            <span class="tech-badge flask" data-tooltip="Framework ligero para microservicios">Flask</span>
+                            <span class="tech-badge angular" data-tooltip="Framework para aplicaciones web dinámicas">Angular</span>
+                            <span class="tech-badge postgresql" data-tooltip="Base de datos relacional avanzada">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Junior Software Engineer</h3>
+                        <h4>Globalbit</h4>
+                        <span class="timeline-date">May 2019 - Ene 2021</span>
+                        <div class="job-description">
+                            <p>Desarrollo de soluciones de Big Data y automatización para empresas corporativas, enfocándome en procesamiento de grandes volúmenes de datos y creación de dashboards inteligentes.</p>
+                        </div>
+                        <ul class="achievements">
+                            <li>Automaticé procesos empresariales con <strong>Python</strong> y <strong>Django</strong>, reduciendo tiempo de procesamiento 70%</li>
+                            <li>Desarrollé scripts de <strong>ETL</strong> con <strong>Python</strong> (<strong>Pandas</strong>, <strong>PySpark</strong>) y <strong>Django</strong> para manejo de Big Data</li>
+                            <li>Implementé soluciones en <strong>Azure</strong>, <strong>Hadoop</strong> y <strong>Spark</strong> con <strong>Python</strong> y <strong>Django</strong></li>
+                            <li>Construí dashboards interactivos con <strong>Power BI</strong> y <strong>Django</strong> para visualización de datos</li>
+                            <li>Apliqué algoritmos de <strong>Machine Learning</strong> con <strong>Python</strong> (<strong>scikit-learn</strong>) integrados con <strong>Django</strong></li>
+                            <li>Desarrollé aplicaciones web escalables con <strong>Django</strong> y <strong>Python</strong> para automatización empresarial</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-badge python" data-tooltip="Lenguaje para automatización y Big Data">Python</span>
+                            <span class="tech-badge django" data-tooltip="Framework web para dashboards y APIs">Django</span>
+                            <span class="tech-badge azure" data-tooltip="Plataforma en la nube de Microsoft">Azure</span>
+                            <span class="tech-badge spark" data-tooltip="Motor de procesamiento distribuido">Apache Spark</span>
+                            <span class="tech-badge ml" data-tooltip="Algoritmos de aprendizaje automático">Machine Learning</span>
+                            <span class="tech-badge powerbi" data-tooltip="Herramienta de visualización de datos">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-tooltip="Lenguaje de programación versátil para backend, AI y data science">Python</span>
+                        <span class="skill-tag" data-tooltip="Lenguaje elegante y expresivo, ideal para desarrollo web ágil">Ruby</span>
+                        <span class="skill-tag" data-tooltip="Framework web robusto de Python para aplicaciones escalables">Django</span>
+                        <span class="skill-tag" data-tooltip="Toolkit para construir APIs REST potentes con Django">Django REST Framework</span>
+                        <span class="skill-tag" data-tooltip="Framework moderno y rápido para crear APIs con Python">FastAPI</span>
+                        <span class="skill-tag" data-tooltip="Framework ligero y flexible de Python para aplicaciones web">Flask</span>
+                        <span class="skill-tag" data-tooltip="Framework MVC completo de Ruby con convención sobre configuración">Ruby on Rails</span>
+                        <span class="skill-tag" data-tooltip="Entorno de ejecución JavaScript del lado del servidor">Node.js</span>
+                        <span class="skill-tag" data-tooltip="Lenguaje de consulta para APIs, alternativa flexible a REST">GraphQL</span>
+                        <span class="skill-tag" data-tooltip="Arquitectura para APIs web usando métodos HTTP estándar">RESTful APIs</span>
+                        <span class="skill-tag" data-tooltip="Arquitectura que divide aplicaciones en servicios independientes">Microservicios</span>
+                        <span class="skill-tag" data-tooltip="Arquitectura de computación en la nube sin gestión de servidores">Serverless</span>
+                        <span class="skill-tag" data-tooltip="Cola de tareas distribuida en tiempo real para Python">Celery</span>
+                        <span class="skill-tag" data-tooltip="Broker de mensajes robusto para sistemas distribuidos">RabbitMQ</span>
+                        <span class="skill-tag" data-tooltip="Estándar abierto para tokens de acceso seguros">JWT</span>
+                        <span class="skill-tag" data-tooltip="Framework para autorización segura de aplicaciones">OAuth2</span>
+                        <span class="skill-tag" data-tooltip="Punto de entrada único para gestionar múltiples APIs">API Gateway</span>
+                        <span class="skill-tag" data-tooltip="Protocolo para comunicación bidireccional en tiempo real">WebSockets</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-tooltip="Lenguaje de programación dinámico para desarrollo web interactivo">JavaScript</span>
+                        <span class="skill-tag" data-tooltip="Superset de JavaScript con tipado estático para mayor robustez">TypeScript</span>
+                        <span class="skill-tag" data-tooltip="Biblioteca JavaScript para construir interfaces de usuario dinámicas">React</span>
+                        <span class="skill-tag" data-tooltip="API moderna de React para manejar estado y efectos en componentes">React Hooks</span>
+                        <span class="skill-tag" data-tooltip="Biblioteca para manejo predecible de estado en aplicaciones JavaScript">Redux</span>
+                        <span class="skill-tag" data-tooltip="API nativa de React para compartir datos entre componentes">Context API</span>
+                        <span class="skill-tag" data-tooltip="Framework completo de TypeScript para aplicaciones web escalables">Angular</span>
+                        <span class="skill-tag" data-tooltip="Framework CSS para desarrollo rápido de interfaces responsivas">Bootstrap</span>
+                        <span class="skill-tag" data-tooltip="Framework CSS utility-first para diseño rápido y personalizado">Tailwind CSS</span>
+                        <span class="skill-tag" data-tooltip="Biblioteca de componentes React basada en Material Design">Material-UI</span>
+                        <span class="skill-tag" data-tooltip="Biblioteca para escribir CSS en JavaScript con componentes estilizados">Styled Components</span>
+                        <span class="skill-tag" data-tooltip="Preprocesador CSS con variables, mixins y funciones avanzadas">SASS/SCSS</span>
+                        <span class="skill-tag" data-tooltip="Última versión de HTML con semántica mejorada y nuevas APIs">HTML5</span>
+                        <span class="skill-tag" data-tooltip="Versión moderna de CSS con animaciones, flexbox y grid">CSS3</span>
+                        <span class="skill-tag" data-tooltip="Bundler de módulos para optimizar y empaquetar aplicaciones web">Webpack</span>
+                        <span class="skill-tag" data-tooltip="Build tool rápido y moderno para desarrollo frontend">Vite</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-tooltip="Base de datos relacional avanzada y de código abierto">PostgreSQL</span>
+                        <span class="skill-tag" data-tooltip="Sistema de gestión de bases de datos relacional popular y confiable">MySQL</span>
+                        <span class="skill-tag" data-tooltip="Base de datos NoSQL orientada a documentos con alta flexibilidad">MongoDB</span>
+                        <span class="skill-tag" data-tooltip="Base de datos NoSQL serverless de AWS para alta performance">DynamoDB</span>
+                        <span class="skill-tag" data-tooltip="Store de estructuras de datos en memoria para cache y mensajería">Redis</span>
+                        <span class="skill-tag" data-tooltip="Motor de búsqueda y analítica distribuido en tiempo real">ElasticSearch</span>
+                        <span class="skill-tag" data-tooltip="Sistema de base de datos relacional empresarial robusto">Oracle</span>
+                        <span class="skill-tag" data-tooltip="Sistema de gestión de bases de datos de Microsoft para empresas">SQL Server</span>
+                        <span class="skill-tag" data-tooltip="Motor de base de datos SQL ligero y autocontenido">SQLite</span>
+                        <span class="skill-tag" data-tooltip="Data warehouse serverless de Google para analítica de big data">BigQuery</span>
+                        <span class="skill-tag" data-tooltip="Repositorio centralizado para almacenar datos estructurados y no estructurados">Data Lake</span>
+                        <span class="skill-tag" data-tooltip="Base de datos NoSQL distribuida diseñada para manejar grandes volúmenes">Cassandra</span>
+                        <span class="skill-tag" data-tooltip="Técnicas para mejorar el rendimiento de consultas en bases de datos">Query Optimization</span>
+                        <span class="skill-tag" data-tooltip="Diseño de esquemas y estructuras de bases de datos eficientes">Database Design</span>
+                        <span class="skill-tag" data-tooltip="Creación de modelos conceptuales y lógicos de datos">Data Modeling</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-tooltip="Plataforma de servicios en la nube líder mundial de Amazon">AWS</span>
+                        <span class="skill-tag" data-tooltip="Servicio de instancias de máquinas virtuales escalables de AWS">EC2</span>
+                        <span class="skill-tag" data-tooltip="Servicio de almacenamiento de objetos escalable de AWS">S3</span>
+                        <span class="skill-tag" data-tooltip="Servicio de computación serverless sin administración de servidores">Lambda</span>
+                        <span class="skill-tag" data-tooltip="Servicio de bases de datos relacionales administradas de AWS">RDS</span>
+                        <span class="skill-tag" data-tooltip="Plataforma de computación en la nube de Microsoft">Azure</span>
+                        <span class="skill-tag" data-tooltip="Google Cloud Platform, servicios de infraestructura en la nube">GCP</span>
+                        <span class="skill-tag" data-tooltip="Plataforma de contenedores para empaquetar y desplegar aplicaciones">Docker</span>
+                        <span class="skill-tag" data-tooltip="Herramienta para definir y ejecutar aplicaciones Docker multi-contenedor">Docker Compose</span>
+                        <span class="skill-tag" data-tooltip="Sistema de orquestación de contenedores para automatizar despliegues">Kubernetes</span>
+                        <span class="skill-tag" data-tooltip="Integración y entrega continua para automatizar el ciclo de desarrollo">CI/CD</span>
+                        <span class="skill-tag" data-tooltip="Servidor de automatización de código abierto para CI/CD">Jenkins</span>
+                        <span class="skill-tag" data-tooltip="Plataforma de CI/CD integrada en GitHub para automatizar workflows">GitHub Actions</span>
+                        <span class="skill-tag" data-tooltip="Sistema de integración continua integrado en GitLab">GitLab CI</span>
+                        <span class="skill-tag" data-tooltip="Sistema de control de versiones distribuido para seguimiento de cambios">Git</span>
+                        <span class="skill-tag" data-tooltip="Modelo de ramificación Git para organizar el desarrollo en equipos">GitFlow</span>
+                        <span class="skill-tag" data-tooltip="Servidor web y proxy reverso de alto rendimiento">Nginx</span>
+                        <span class="skill-tag" data-tooltip="Servidor web HTTP multiplataforma y de código abierto">Apache</span>
+                        <span class="skill-tag" data-tooltip="Distribución de tráfico entrante entre múltiples servidores">Load Balancers</span>
+                        <span class="skill-tag" data-tooltip="Supervisión y observabilidad de sistemas y aplicaciones en producción">Monitoring</span>
+                        <span class="skill-tag" data-tooltip="Plataforma de visualización y monitoreo de métricas en tiempo real">Grafana</span>
+                        <span class="skill-tag" data-tooltip="Sistema de monitoreo y alertas de código abierto para métricas">Prometheus</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Big Data & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-tooltip="Framework de código abierto para procesamiento distribuido de big data">Hadoop</span>
+                        <span class="skill-tag" data-tooltip="Motor de analítica unificado para procesamiento de datos a gran escala">Apache Spark</span>
+                        <span class="skill-tag" data-tooltip="Data warehouse para consultas y análisis sobre datos en Hadoop">Hive</span>
+                        <span class="skill-tag" data-tooltip="Plataforma distribuida de streaming para procesamiento de eventos en tiempo real">Kafka</span>
+                        <span class="skill-tag" data-tooltip="Plataforma para programar, organizar y monitorear workflows de datos">Airflow</span>
+                        <span class="skill-tag" data-tooltip="Procesamiento de Lenguaje Natural para analizar y entender texto humano">NLP</span>
+                        <span class="skill-tag" data-tooltip="Framework para desarrollar aplicaciones impulsadas por modelos de lenguaje">LangChain</span>
+                        <span class="skill-tag" data-tooltip="API para integrar modelos de IA generativa como GPT en aplicaciones">OpenAI API</span>
+                        <span class="skill-tag" data-tooltip="Algoritmos que permiten a las máquinas aprender de datos sin programación explícita">Machine Learning</span>
+                        <span class="skill-tag" data-tooltip="Subconjunto de ML que usa redes neuronales profundas para patrones complejos">Deep Learning</span>
+                        <span class="skill-tag" data-tooltip="Plataforma de código abierto para machine learning y deep learning">TensorFlow</span>
+                        <span class="skill-tag" data-tooltip="Framework de deep learning con computación tensorial dinámica">PyTorch</span>
+                        <span class="skill-tag" data-tooltip="Biblioteca de machine learning simple y eficiente para Python">Scikit-learn</span>
+                        <span class="skill-tag" data-tooltip="Biblioteca de Python para manipulación y análisis de datos estructurados">Pandas</span>
+                        <span class="skill-tag" data-tooltip="Biblioteca fundamental para computación científica con arrays multidimensionales">NumPy</span>
+                        <span class="skill-tag" data-tooltip="Entorno interactivo para desarrollo y visualización de proyectos de datos">Jupyter</span>
+                        <span class="skill-tag" data-tooltip="Proceso de examinar datos para extraer insights útiles y patrones">Data Analysis</span>
+                        <span class="skill-tag" data-tooltip="Representación gráfica de datos para comunicar insights de forma clara">Data Visualization</span>
+                        <span class="skill-tag" data-tooltip="Biblioteca de Python para crear visualizaciones estáticas, animadas e interactivas">Matplotlib</span>
+                        <span class="skill-tag" data-tooltip="Biblioteca de visualización estadística basada en Matplotlib">Seaborn</span>
+                        <span class="skill-tag" data-tooltip="Extracción, Transformación y Carga de datos entre sistemas">ETL</span>
+                        <span class="skill-tag" data-tooltip="Flujos automatizados para procesar y mover datos entre sistemas">Data Pipelines</span>
+                        <span class="skill-tag" data-tooltip="Ecosistema completo de librerías Python para ciencia de datos">Python Data Stack</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-vial"></i> Testing & QA</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-tooltip="Framework de testing avanzado y fácil de usar para Python">Pytest</span>
+                        <span class="skill-tag" data-tooltip="Framework de testing para Ruby con sintaxis expresiva y legible">RSpec</span>
+                        <span class="skill-tag" data-tooltip="Suite de testing simple y rápida incluida con Ruby">Minitest</span>
+                        <span class="skill-tag" data-tooltip="Framework de testing unitario estándar incluido con Python">Unittest</span>
+                        <span class="skill-tag" data-tooltip="Framework de testing de JavaScript con enfoque en simplicidad">Jest</span>
+                        <span class="skill-tag" data-tooltip="Framework de testing end-to-end rápido y confiable para aplicaciones web">Cypress</span>
+                        <span class="skill-tag" data-tooltip="Suite de herramientas para automatizar navegadores web en testing">Selenium</span>
+                        <span class="skill-tag" data-tooltip="Plataforma para desarrollo, testing y documentación de APIs">Postman</span>
+                        <span class="skill-tag" data-tooltip="Desarrollo Dirigido por Pruebas: escribir tests antes del código">TDD</span>
+                        <span class="skill-tag" data-tooltip="Desarrollo Dirigido por Comportamiento basado en especificaciones">BDD</span>
+                        <span class="skill-tag" data-tooltip="Pruebas de unidades individuales de código de forma aislada">Unit Testing</span>
+                        <span class="skill-tag" data-tooltip="Pruebas de integración entre diferentes componentes del sistema">Integration Testing</span>
+                        <span class="skill-tag" data-tooltip="Pruebas de extremo a extremo que simulan el comportamiento del usuario">E2E Testing</span>
+                        <span class="skill-tag" data-tooltip="Verificación de funcionalidad, confiabilidad y rendimiento de APIs">API Testing</span>
+                        <span class="skill-tag" data-tooltip="Evaluación de velocidad, escalabilidad y estabilidad bajo carga">Performance Testing</span>
+                        <span class="skill-tag" data-tooltip="Pruebas para determinar el comportamiento bajo condiciones de carga esperadas">Load Testing</span>
+                        <span class="skill-tag" data-tooltip="Automatización de procesos de testing para mayor eficiencia y cobertura">Test Automation</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-sitemap"></i> Arquitectura & Metodologías</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-tooltip="Arquitectura que separa lógica de negocio de frameworks y tecnologías">Clean Architecture</span>
+                        <span class="skill-tag" data-tooltip="Principios de diseño para software mantenible y extensible">SOLID</span>
+                        <span class="skill-tag" data-tooltip="Soluciones reutilizables a problemas comunes en diseño de software">Design Patterns</span>
+                        <span class="skill-tag" data-tooltip="Patrón Modelo-Vista-Controlador para separar lógica de presentación">MVC</span>
+                        <span class="skill-tag" data-tooltip="Patrón Modelo-Vista-Presentador para interfaces desacopladas">MVP</span>
+                        <span class="skill-tag" data-tooltip="Patrón Modelo-Vista-VistaModelo para binding bidireccional">MVVM</span>
+                        <span class="skill-tag">Microservicios</span>
+                        <span class="skill-tag" data-tooltip="Enfoque de desarrollo centrado en el dominio del negocio">Domain-Driven Design</span>
+                        <span class="skill-tag" data-tooltip="Arquitectura basada en producción y consumo de eventos">Event-Driven Architecture</span>
+                        <span class="skill-tag" data-tooltip="Segregación de Responsabilidades de Comandos y Consultas">CQRS</span>
+                        <span class="skill-tag" data-tooltip="Metodología de desarrollo iterativa y colaborativa">Agile</span>
+                        <span class="skill-tag" data-tooltip="Framework ágil con sprints, roles y ceremonias definidas">Scrum</span>
+                        <span class="skill-tag" data-tooltip="Método de gestión visual del flujo de trabajo">Kanban</span>
+                        <span class="skill-tag" data-tooltip="Cultura de colaboración entre desarrollo y operaciones">DevOps Culture</span>
+                        <span class="skill-tag" data-tooltip="Proceso de revisión de código para garantizar calidad">Code Review</span>
+                        <span class="skill-tag" data-tooltip="Liderazgo técnico y mentoría en equipos de desarrollo">Technical Leadership</span>
+                        <span class="skill-tag" data-tooltip="Diseño de arquitecturas de sistemas distribuidos y escalables">System Design</span>
+                        <span class="skill-tag" data-tooltip="Capacidad de sistemas para manejar carga creciente eficientemente">Scalability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Mis Servicios</h2>
+            <div class="services-grid">
+                
+                <!-- Backend Development -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Desarrollo Backend</h3>
+                    <p>APIs robustas y escalables con Python, Ruby y Node.js</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> APIs RESTful y GraphQL</li>
+                        <li><i class="fas fa-check"></i> Microservicios escalables</li>
+                        <li><i class="fas fa-check"></i> Arquitecturas serverless</li>
+                        <li><i class="fas fa-check"></i> Integración de terceros</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Ruby on Rails</span>
+                        <span class="tech-tag more">Entre otros</span>
+                    </div>
+                </div>
+
+                <!-- Frontend Development -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Desarrollo Frontend</h3>
+                    <p>Interfaces modernas, responsivas e interactivas</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Aplicaciones SPA</li>
+                        <li><i class="fas fa-check"></i> Diseño responsive</li>
+                        <li><i class="fas fa-check"></i> Optimización performance</li>
+                        <li><i class="fas fa-check"></i> UX/UI moderno</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag more">Entre otros</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Infraestructura en la nube y automatización de procesos</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Migración a la nube</li>
+                        <li><i class="fas fa-check"></i> CI/CD pipelines</li>
+                        <li><i class="fas fa-check"></i> Containerización</li>
+                        <li><i class="fas fa-check"></i> Monitoreo y alertas</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag more">Entre otros</span>
+                    </div>
+                </div>
+
+                <!-- Database Design -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Diseño de Bases de Datos</h3>
+                    <p>Arquitecturas de datos eficientes y escalables</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Modelado de datos</li>
+                        <li><i class="fas fa-check"></i> Optimización de queries</li>
+                        <li><i class="fas fa-check"></i> Migración de datos</li>
+                        <li><i class="fas fa-check"></i> Backup y recovery</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag more">Entre otros</span>
+                    </div>
+                </div>
+
+                <!-- AI & Data Science -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>IA & Ciencia de Datos</h3>
+                    <p>Soluciones inteligentes con Machine Learning y NLP</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Modelos ML personalizados</li>
+                        <li><i class="fas fa-check"></i> Procesamiento de lenguaje natural</li>
+                        <li><i class="fas fa-check"></i> Análisis de datos</li>
+                        <li><i class="fas fa-check"></i> Integración con LLMs</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag more">Entre otros</span>
+                    </div>
+                </div>
+
+                <!-- Systems Integration -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Integración de Sistemas</h3>
+                    <p>Conecta y automatiza tus sistemas empresariales</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> APIs de integración</li>
+                        <li><i class="fas fa-check"></i> ETL/ELT pipelines</li>
+                        <li><i class="fas fa-check"></i> Sincronización de datos</li>
+                        <li><i class="fas fa-check"></i> Automatización de procesos</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-tag">Apache Airflow</span>
+                        <span class="tech-tag">Celery</span>
+                        <span class="tech-tag">RabbitMQ</span>
+                        <span class="tech-tag">Kafka</span>
+                        <span class="tech-tag more">Entre otros</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="services-cta">
+                <a href="servicios.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i>
+                    Ver Todos los Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¡Trabajemos juntos!</h3>
+                    <p>
+                        Estoy disponible para nuevos proyectos y oportunidades. 
+                        Si tienes una idea o necesitas ayuda con desarrollo de software, 
+                        no dudes en contactarme.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span>Email</span>
+                                <p>juan.suva25@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span>Teléfono</span>
+                                <p>+57 311 762 7757</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span>Ubicación</span>
+                                <p>Pereira, Colombia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/juan.suva25@gmail.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tu mensaje..." required></textarea>
+                    </div>
+                    <!-- Hidden field for anti-spam -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Custom subject line -->
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
+                    
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be loaded dynamically -->
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
