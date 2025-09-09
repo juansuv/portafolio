@@ -83,34 +83,85 @@ function initializeScrollProgress() {
     window.addEventListener('scroll', updateScrollProgress);
 }
 
-// Load footer component
-async function loadFooter() {
+// Generic component loader
+async function loadComponent(componentName, placeholderId) {
     try {
-        const response = await fetch('components/footer.html');
+        const response = await fetch(`components/${componentName}.html`);
         if (response.ok) {
-            const footerHTML = await response.text();
-            const footerPlaceholder = document.getElementById('footer-placeholder');
-            if (footerPlaceholder) {
-                footerPlaceholder.innerHTML = footerHTML;
+            const componentHTML = await response.text();
+            const placeholder = document.getElementById(placeholderId);
+            if (placeholder) {
+                placeholder.innerHTML = componentHTML;
                 
-                // Animate footer entrance
-                const footer = footerPlaceholder.querySelector('.footer');
-                if (footer) {
-                    footer.style.opacity = '0';
-                    footer.style.transform = 'translateY(20px)';
-                    footer.style.transition = 'all 0.6s ease';
-                    
-                    setTimeout(() => {
-                        footer.style.opacity = '1';
-                        footer.style.transform = 'translateY(0)';
-                    }, 100);
-                }
+                // Add entrance animation
+                placeholder.style.opacity = '0';
+                placeholder.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    placeholder.style.transition = 'all 0.6s ease-out';
+                    placeholder.style.opacity = '1';
+                    placeholder.style.transform = 'translateY(0)';
+                }, 100);
+                
+                return true;
             }
         } else {
-            console.warn('Could not load footer component');
+            console.warn(`Could not load ${componentName} component`);
         }
     } catch (error) {
-        console.error('Error loading footer:', error);
+        console.error(`Error loading ${componentName}:`, error);
+    }
+    return false;
+}
+
+// Load footer component
+async function loadFooter() {
+    const loaded = await loadComponent('footer', 'footer-placeholder');
+    if (loaded) {
+        // Initialize tooltips for social links after footer loads
+        setTimeout(() => {
+            initializeTooltips();
+        }, 200);
+    }
+}
+
+// Load services content for servicios.html
+async function loadServicesContent() {
+    const loaded = await loadComponent('servicios', 'services-content');
+    if (loaded) {
+        // Initialize scroll reveal for services content
+        setTimeout(() => {
+            initializeScrollReveal();
+        }, 200);
+    }
+}
+
+// Load thank you content for gracias.html  
+async function loadThanksContent() {
+    const loaded = await loadComponent('gracias', 'thanks-content');
+    if (loaded) {
+        // Initialize countdown after thank you page loads
+        setTimeout(() => {
+            initializeCountdown();
+        }, 200);
+    }
+}
+
+// Initialize countdown for thank you page
+function initializeCountdown() {
+    let countdown = 5;
+    const countdownElement = document.getElementById('countdown');
+    
+    if (countdownElement) {
+        const timer = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
     }
 }
 
@@ -409,38 +460,36 @@ function trackFormSubmission(formData) {
     }
 }
 
-// Advanced scroll animations with staggered effects
-function animateOnScroll() {
-    const animateElements = document.querySelectorAll('.timeline-item, .skill-category, .service-card, .process-step, .pricing-card');
+// Enhanced scroll reveal system
+function initializeScrollReveal() {
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .timeline-item, .skill-category, .service-card');
     
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const delay = index * 0.1;
-                const animationType = getAnimationType(entry.target);
+                entry.target.classList.add('revealed');
                 
-                setTimeout(() => {
-                    entry.target.style.animation = `${animationType} 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards`;
-                    entry.target.style.opacity = '1';
-                    
-                    // Add floating animation to skill categories
-                    if (entry.target.classList.contains('skill-category')) {
-                        setTimeout(() => {
-                            entry.target.style.animation += ', float 4s ease-in-out infinite';
-                        }, 800);
-                    }
-                }, delay * 1000);
+                // Add stagger delay for grouped elements
+                const siblings = Array.from(entry.target.parentNode.children);
+                const index = siblings.indexOf(entry.target);
+                entry.target.style.transitionDelay = `${index * 0.1}s`;
                 
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -80px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     });
     
-    animateElements.forEach(element => {
-        element.style.opacity = '0';
+    revealElements.forEach(element => {
+        // Add appropriate reveal class if not already present
+        if (!element.classList.contains('reveal') && 
+            !element.classList.contains('reveal-left') && 
+            !element.classList.contains('reveal-right') && 
+            !element.classList.contains('reveal-scale')) {
+            element.classList.add('reveal');
+        }
         observer.observe(element);
     });
 }
@@ -652,8 +701,26 @@ function initializeLazyLoading() {
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
-    // Load footer component first
+    // Load components based on current page
+    const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+    
+    // Always load footer
     loadFooter();
+    
+    // Load specific page content
+    if (currentPage === 'servicios' || currentPage === '') {
+        const servicesContent = document.getElementById('services-content');
+        if (servicesContent) {
+            loadServicesContent();
+        }
+    }
+    
+    if (currentPage === 'gracias') {
+        const thanksContent = document.getElementById('thanks-content');
+        if (thanksContent) {
+            loadThanksContent();
+        }
+    }
     // Mobile menu toggle
     if (hamburger) {
         hamburger.addEventListener('click', toggleMobileMenu);
@@ -690,7 +757,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Initialize animations
-    animateOnScroll();
+    initializeScrollReveal();
     animateCounters();
     initializeTypingAnimation();
     initializeProfileImage();

@@ -13,6 +13,9 @@ portafolio/
 ├── script.js           # Funcionalidad JavaScript
 ├── components/
 │   └── footer.html     # Componente footer reutilizable
+│   └── gracias.html    # Página de agradecimiento
+│   └── servicios.html  # Página de servicios detallada
+|
 ├── img/
 │   └── perfil.jpeg     # Imagen de perfil
 └── README.md           # Este archivo
@@ -30,43 +33,6 @@ portafolio/
 - **Funcionamiento**: Abre el cliente de correo del usuario
 - **Ventajas**: Funciona inmediatamente sin configuración
 - **Experiencia**: El usuario puede editar el mensaje antes de enviar
-
-### Para configurar Formspree (recomendado para producción):
-
-1. **Registrarse en Formspree**:
-   - Ir a https://formspree.io
-   - Crear cuenta gratis
-   - Verificar el email juan.suva25@gmail.com
-
-2. **Obtener el endpoint**:
-   - Formspree te dará un endpoint como: `https://formspree.io/f/xXXXXXXX`
-
-3. **Actualizar el código**:
-   ```javascript
-   // En script.js, descomenta y actualiza esta sección:
-   const response = await fetch('https://formspree.io/f/TU_ENDPOINT', {
-       method: 'POST',
-       body: formData,
-       headers: {
-           'Accept': 'application/json'
-       }
-   });
-   ```
-
-4. **Activar el endpoint**:
-   - Envía un mensaje de prueba
-   - Confirma en tu email
-   - ¡Listo!
-
-### Características del formulario:
-
-✅ **Validación completa** - Campos obligatorios y formato de email
-✅ **Estados de carga** - Spinner mientras se procesa
-✅ **Mensajes informativos** - Éxito y errores claros
-✅ **Backup automático** - Mailto si falla el servicio principal
-✅ **Página de agradecimiento** - Experiencia profesional
-✅ **Responsive** - Funciona en todos los dispositivos
-✅ **Anti-spam** - Protección integrada
 
 ## 🎨 Características del diseño
 
@@ -155,7 +121,7 @@ Edita las variables CSS en `styles.css`:
 
 ## 📄 Licencia
 
-Este proyecto es de uso personal. Puedes modificarlo libremente para tu propio portafolio.
+Este proyecto es de uso personal. 
 
 ## 🤝 Contacto
 
