@@ -699,6 +699,121 @@ function initializeLazyLoading() {
     }
 }
 
+// Function to handle service links and pre-fill contact form
+function initializeServiceLinks() {
+    // Handle service links click
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('service-link') || e.target.closest('.service-link')) {
+            const link = e.target.classList.contains('service-link') ? e.target : e.target.closest('.service-link');
+            const serviceType = link.getAttribute('data-service');
+            
+            if (serviceType) {
+                // Store service type in localStorage
+                localStorage.setItem('selectedService', serviceType);
+            }
+        }
+    });
+}
+
+// Function to pre-fill contact form based on stored service
+function handleServicePreFill() {
+    const serviceType = localStorage.getItem('selectedService');
+    
+    if (serviceType) {
+        const messageTextarea = document.getElementById('message');
+        const subjectInput = document.getElementById('subject');
+        
+        if (messageTextarea) {
+            let predefinedMessage = '';
+            let predefinedSubject = '';
+            
+            switch (serviceType) {
+                case 'proyecto':
+                    predefinedSubject = 'Cotización para Proyecto Completo';
+                    predefinedMessage = `Hola Juan Diego,
+
+Me interesa cotizar un proyecto completo de desarrollo. Me gustaría discutir:
+
+- Alcance del proyecto:
+- Tecnologías requeridas:
+- Timeframe estimado:
+- Presupuesto aproximado:
+
+Por favor, contactame para agendar una reunión y discutir los detalles.
+
+Saludos,`;
+                    break;
+                    
+                case 'consultoria':
+                    predefinedSubject = 'Agendar Sesión de Consultoría Técnica';
+                    predefinedMessage = `Hola Juan Diego,
+
+Me interesa agendar una sesión de consultoría técnica. Necesito ayuda con:
+
+- Tema específico:
+- Duración estimada:
+- Modalidad preferida (presencial/virtual):
+- Fechas disponibles:
+
+Espero tu respuesta para coordinar la sesión.
+
+Saludos,`;
+                    break;
+                    
+                case 'mantenimiento':
+                    predefinedSubject = 'Contratar Servicio de Mantenimiento';
+                    predefinedMessage = `Hola Juan Diego,
+
+Me interesa contratar el servicio de mantenimiento mensual. Mi proyecto incluye:
+
+- Tipo de aplicación:
+- Tecnologías utilizadas:
+- Tráfico/usuarios aproximados:
+- Servicios actuales de hosting:
+
+Me gustaría conocer más detalles sobre el plan de mantenimiento.
+
+Saludos,`;
+                    break;
+                    
+                case 'general':
+                    predefinedSubject = 'Consulta sobre Servicios de Desarrollo';
+                    predefinedMessage = `Hola Juan Diego,
+
+Me interesa conocer más sobre tus servicios de desarrollo. Tengo un proyecto en mente que incluye:
+
+- Descripción del proyecto:
+- Objetivo principal:
+- Timeframe deseado:
+- Presupuesto estimado:
+
+Me gustaría agendar una llamada para discutir los detalles.
+
+Saludos,`;
+                    break;
+            }
+            
+            if (predefinedMessage) {
+                messageTextarea.value = predefinedMessage;
+                if (subjectInput && predefinedSubject) {
+                    subjectInput.value = predefinedSubject;
+                }
+                
+                // Clear the stored service
+                localStorage.removeItem('selectedService');
+                
+                // Scroll to contact section smoothly after a brief delay
+                setTimeout(() => {
+                    const contactSection = document.querySelector('#contact');
+                    if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 200);
+            }
+        }
+    }
+}
+
 // Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
     // Load components based on current page
@@ -769,6 +884,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeMagneticButtons();
     initializeScrollProgress();
     initializeTooltips();
+    
+    // Initialize service links and handle pre-filling contact form
+    initializeServiceLinks();
+    handleServicePreFill();
     
     // Handle ESC key to close mobile menu
     document.addEventListener('keydown', (e) => {
