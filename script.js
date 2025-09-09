@@ -378,7 +378,7 @@ async function handleFormSubmission(event) {
         
         if (response.ok) {
             trackFormSubmission(formData);
-            window.location.href = 'gracias.html';
+            window.location.href = 'components/gracias.html';
             return;
         }
         
