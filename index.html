@@ -21,9 +21,10 @@
                 <li><a href="#home" class="nav-link">Inicio</a></li>
                 <li><a href="#about" class="nav-link">Sobre Mí</a></li>
                 <li><a href="#experience" class="nav-link">Experiencia</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#certifications" class="nav-link">Certificaciones</a></li>
-                <li><a href="#services" class="nav-link">Servicios</a></li>
+                <li><a href="#services" class="nav-link">Expertise</a></li>
                 <li><a href="#contact" class="nav-link">Contacto</a></li>
             </ul>
             <div class="hamburger">
@@ -49,26 +50,28 @@
                         especializado en Ruby on Rails, Python, TypeScript y arquitecturas escalables.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Contactar</a>
-                        <a href="#about" class="btn btn-secondary">Conocer más</a>
+                        <a href="docs/juan-diego-suarez-cv.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-download" aria-hidden="true"></i> Descargar CV
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Contactar</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="img/perfil.jpeg" alt="Juan Diego Suárez - Software Engineer" class="profile-image" loading="lazy">
+                    <img src="img/perfil.jpeg" alt="Juan Diego Suárez - Software Engineer" class="profile-image">
                 </div>
             </div>
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number">7+</span>
-                    <span class="stat-label">Años Experiencia</span>
+                    <span class="stat-label">Años de Experiencia</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">20+</span>
-                    <span class="stat-label">Proyectos</span>
+                    <span class="stat-number">+400</span>
+                    <span class="stat-label">Brokers Integrados</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Tecnologías</span>
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">GB/día Procesados</span>
                 </div>
             </div>
         </div>
@@ -293,179 +296,184 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="services">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <p style="text-align:center; max-width:780px; margin:0 auto 2.5rem; color:var(--text-secondary);">
+                Case studies de sistemas construidos en producción. Por acuerdos de confidencialidad
+                algunos detalles internos son anonimizados; los logros, decisiones técnicas y stack son reales.
+            </p>
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                    <h3>Integración con +400 Brokers Internacionales</h3>
+                    <p><strong>Trade Sync</strong> &middot; Fintech &middot; Arquitectura desde cero</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Pipelines extrayendo históricos desde APIs, CSV, FIX protocol y webscraping</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Motor de análisis cuantitativo (P&amp;L, win rate, Sharpe ratio)</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> IA aplicada al trading: LLMs + LangChain + scikit-learn</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Arquitectura event-driven con latencia sub-segundo</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+                    <h3>Migración Monolito &rarr; Microservicios</h3>
+                    <p><strong>BUK</strong> &middot; SaaS RR.HH. enterprise &middot; Liderazgo técnico</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Rails 4 &rarr; 7 con endpoints críticos sin interrumpir producción</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 30% menos latencia en BD, 40% menos errores en QA</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Entornos efímeros con Docker en AWS y GCP</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Microservicios REST/GraphQL para interoperabilidad entre módulos</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-tag">Ruby on Rails</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">GCP</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-database" aria-hidden="true"></i></div>
+                    <h3>Analítica de Agotados para Retail</h3>
+                    <p><strong>Logyca</strong> &middot; Retail Analytics &middot; Producto end-to-end</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 20% menos desabastecimiento en grandes cadenas retail</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Pipelines ETL procesando +1TB de datos diarios</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Tableros Power BI para +200 usuarios internos</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Migración a microservicios sobre Azure/GCP/AWS</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">PySpark</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Power BI</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-truck-fast" aria-hidden="true"></i></div>
+                    <h3>Plataforma Logística Multi-tenant</h3>
+                    <p><strong>Skydropx</strong> &middot; Logística &middot; Desarrollo actual</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Envíos contraentrega (COD) sobre Ruby on Rails</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Gestión de usuarios, roles y equipos multi-tenant</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Dashboards de métricas operativas en tiempo real</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> RSpec y revisiones en entorno de alta concurrencia</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span class="tech-tag">Ruby on Rails</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">Habilidades Técnicas</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <h3><i class="fas fa-server" aria-hidden="true"></i> Backend</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-tooltip="Lenguaje de programación versátil para backend, AI y data science">Python</span>
-                        <span class="skill-tag" data-tooltip="Lenguaje elegante y expresivo, ideal para desarrollo web ágil">Ruby</span>
-                        <span class="skill-tag" data-tooltip="Framework web robusto de Python para aplicaciones escalables">Django</span>
-                        <span class="skill-tag" data-tooltip="Toolkit para construir APIs REST potentes con Django">Django REST Framework</span>
-                        <span class="skill-tag" data-tooltip="Framework moderno y rápido para crear APIs con Python">FastAPI</span>
-                        <span class="skill-tag" data-tooltip="Framework ligero y flexible de Python para aplicaciones web">Flask</span>
+                        <span class="skill-tag" data-tooltip="Lenguaje dinámico, productivo y elegante">Ruby</span>
+                        <span class="skill-tag" data-tooltip="Lenguaje versátil para backend, data y AI">Python</span>
                         <span class="skill-tag" data-tooltip="Framework MVC completo de Ruby con convención sobre configuración">Ruby on Rails</span>
-                        <span class="skill-tag" data-tooltip="Entorno de ejecución JavaScript del lado del servidor">Node.js</span>
-                        <span class="skill-tag" data-tooltip="Lenguaje de consulta para APIs, alternativa flexible a REST">GraphQL</span>
-                        <span class="skill-tag" data-tooltip="Arquitectura para APIs web usando métodos HTTP estándar">RESTful APIs</span>
-                        <span class="skill-tag" data-tooltip="Arquitectura que divide aplicaciones en servicios independientes">Microservicios</span>
-                        <span class="skill-tag" data-tooltip="Arquitectura de computación en la nube sin gestión de servidores">Serverless</span>
-                        <span class="skill-tag" data-tooltip="Cola de tareas distribuida en tiempo real para Python">Celery</span>
-                        <span class="skill-tag" data-tooltip="Broker de mensajes robusto para sistemas distribuidos">RabbitMQ</span>
-                        <span class="skill-tag" data-tooltip="Estándar abierto para tokens de acceso seguros">JWT</span>
-                        <span class="skill-tag" data-tooltip="Framework para autorización segura de aplicaciones">OAuth2</span>
-                        <span class="skill-tag" data-tooltip="Punto de entrada único para gestionar múltiples APIs">API Gateway</span>
-                        <span class="skill-tag" data-tooltip="Protocolo para comunicación bidireccional en tiempo real">WebSockets</span>
+                        <span class="skill-tag" data-tooltip="Framework moderno y rápido para APIs con Python">FastAPI</span>
+                        <span class="skill-tag" data-tooltip="Framework web robusto de Python para aplicaciones escalables">Django</span>
+                        <span class="skill-tag" data-tooltip="Lenguaje de consulta flexible para APIs">GraphQL</span>
+                        <span class="skill-tag" data-tooltip="Arquitectura distribuida en servicios independientes">Microservicios</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <h3><i class="fas fa-laptop-code" aria-hidden="true"></i> Frontend</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-tooltip="Lenguaje de programación dinámico para desarrollo web interactivo">JavaScript</span>
-                        <span class="skill-tag" data-tooltip="Superset de JavaScript con tipado estático para mayor robustez">TypeScript</span>
-                        <span class="skill-tag" data-tooltip="Biblioteca JavaScript para construir interfaces de usuario dinámicas">React</span>
-                        <span class="skill-tag" data-tooltip="API moderna de React para manejar estado y efectos en componentes">React Hooks</span>
-                        <span class="skill-tag" data-tooltip="Biblioteca para manejo predecible de estado en aplicaciones JavaScript">Redux</span>
-                        <span class="skill-tag" data-tooltip="API nativa de React para compartir datos entre componentes">Context API</span>
-                        <span class="skill-tag" data-tooltip="Framework completo de TypeScript para aplicaciones web escalables">Angular</span>
-                        <span class="skill-tag" data-tooltip="Framework CSS para desarrollo rápido de interfaces responsivas">Bootstrap</span>
-                        <span class="skill-tag" data-tooltip="Framework CSS utility-first para diseño rápido y personalizado">Tailwind CSS</span>
-                        <span class="skill-tag" data-tooltip="Biblioteca de componentes React basada en Material Design">Material-UI</span>
-                        <span class="skill-tag" data-tooltip="Biblioteca para escribir CSS en JavaScript con componentes estilizados">Styled Components</span>
-                        <span class="skill-tag" data-tooltip="Preprocesador CSS con variables, mixins y funciones avanzadas">SASS/SCSS</span>
-                        <span class="skill-tag" data-tooltip="Última versión de HTML con semántica mejorada y nuevas APIs">HTML5</span>
-                        <span class="skill-tag" data-tooltip="Versión moderna de CSS con animaciones, flexbox y grid">CSS3</span>
-                        <span class="skill-tag" data-tooltip="Bundler de módulos para optimizar y empaquetar aplicaciones web">Webpack</span>
-                        <span class="skill-tag" data-tooltip="Build tool rápido y moderno para desarrollo frontend">Vite</span>
+                        <span class="skill-tag" data-tooltip="Biblioteca para construir interfaces dinámicas">React</span>
+                        <span class="skill-tag" data-tooltip="JavaScript con tipado estático">TypeScript</span>
+                        <span class="skill-tag" data-tooltip="Lenguaje dinámico para desarrollo web interactivo">JavaScript</span>
+                        <span class="skill-tag" data-tooltip="Framework completo de TypeScript">Angular</span>
+                        <span class="skill-tag" data-tooltip="HTML semántico moderno con nuevas APIs">HTML5</span>
+                        <span class="skill-tag" data-tooltip="CSS moderno con flexbox, grid y animaciones">CSS3</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <h3><i class="fas fa-database" aria-hidden="true"></i> Bases de Datos</h3>
                     <div class="skill-tags">
                         <span class="skill-tag" data-tooltip="Base de datos relacional avanzada y de código abierto">PostgreSQL</span>
-                        <span class="skill-tag" data-tooltip="Sistema de gestión de bases de datos relacional popular y confiable">MySQL</span>
-                        <span class="skill-tag" data-tooltip="Base de datos NoSQL orientada a documentos con alta flexibilidad">MongoDB</span>
-                        <span class="skill-tag" data-tooltip="Base de datos NoSQL serverless de AWS para alta performance">DynamoDB</span>
-                        <span class="skill-tag" data-tooltip="Store de estructuras de datos en memoria para cache y mensajería">Redis</span>
-                        <span class="skill-tag" data-tooltip="Motor de búsqueda y analítica distribuido en tiempo real">ElasticSearch</span>
-                        <span class="skill-tag" data-tooltip="Sistema de base de datos relacional empresarial robusto">Oracle</span>
-                        <span class="skill-tag" data-tooltip="Sistema de gestión de bases de datos de Microsoft para empresas">SQL Server</span>
-                        <span class="skill-tag" data-tooltip="Motor de base de datos SQL ligero y autocontenido">SQLite</span>
-                        <span class="skill-tag" data-tooltip="Data warehouse serverless de Google para analítica de big data">BigQuery</span>
-                        <span class="skill-tag" data-tooltip="Repositorio centralizado para almacenar datos estructurados y no estructurados">Data Lake</span>
-                        <span class="skill-tag" data-tooltip="Base de datos NoSQL distribuida diseñada para manejar grandes volúmenes">Cassandra</span>
-                        <span class="skill-tag" data-tooltip="Técnicas para mejorar el rendimiento de consultas en bases de datos">Query Optimization</span>
-                        <span class="skill-tag" data-tooltip="Diseño de esquemas y estructuras de bases de datos eficientes">Database Design</span>
-                        <span class="skill-tag" data-tooltip="Creación de modelos conceptuales y lógicos de datos">Data Modeling</span>
+                        <span class="skill-tag" data-tooltip="Base de datos NoSQL orientada a documentos">MongoDB</span>
+                        <span class="skill-tag" data-tooltip="Store en memoria para cache y mensajería">Redis</span>
+                        <span class="skill-tag" data-tooltip="Base NoSQL serverless de AWS">DynamoDB</span>
+                        <span class="skill-tag" data-tooltip="Data warehouse serverless de Google">BigQuery</span>
+                        <span class="skill-tag" data-tooltip="Motor de búsqueda distribuido">ElasticSearch</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                    <h3><i class="fas fa-cloud" aria-hidden="true"></i> Cloud &amp; DevOps</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-tooltip="Plataforma de servicios en la nube líder mundial de Amazon">AWS</span>
-                        <span class="skill-tag" data-tooltip="Servicio de instancias de máquinas virtuales escalables de AWS">EC2</span>
-                        <span class="skill-tag" data-tooltip="Servicio de almacenamiento de objetos escalable de AWS">S3</span>
-                        <span class="skill-tag" data-tooltip="Servicio de computación serverless sin administración de servidores">Lambda</span>
-                        <span class="skill-tag" data-tooltip="Servicio de bases de datos relacionales administradas de AWS">RDS</span>
-                        <span class="skill-tag" data-tooltip="Plataforma de computación en la nube de Microsoft">Azure</span>
-                        <span class="skill-tag" data-tooltip="Google Cloud Platform, servicios de infraestructura en la nube">GCP</span>
-                        <span class="skill-tag" data-tooltip="Plataforma de contenedores para empaquetar y desplegar aplicaciones">Docker</span>
-                        <span class="skill-tag" data-tooltip="Herramienta para definir y ejecutar aplicaciones Docker multi-contenedor">Docker Compose</span>
-                        <span class="skill-tag" data-tooltip="Sistema de orquestación de contenedores para automatizar despliegues">Kubernetes</span>
-                        <span class="skill-tag" data-tooltip="Integración y entrega continua para automatizar el ciclo de desarrollo">CI/CD</span>
-                        <span class="skill-tag" data-tooltip="Servidor de automatización de código abierto para CI/CD">Jenkins</span>
-                        <span class="skill-tag" data-tooltip="Plataforma de CI/CD integrada en GitHub para automatizar workflows">GitHub Actions</span>
-                        <span class="skill-tag" data-tooltip="Sistema de integración continua integrado en GitLab">GitLab CI</span>
-                        <span class="skill-tag" data-tooltip="Sistema de control de versiones distribuido para seguimiento de cambios">Git</span>
-                        <span class="skill-tag" data-tooltip="Modelo de ramificación Git para organizar el desarrollo en equipos">GitFlow</span>
-                        <span class="skill-tag" data-tooltip="Servidor web y proxy reverso de alto rendimiento">Nginx</span>
-                        <span class="skill-tag" data-tooltip="Servidor web HTTP multiplataforma y de código abierto">Apache</span>
-                        <span class="skill-tag" data-tooltip="Distribución de tráfico entrante entre múltiples servidores">Load Balancers</span>
-                        <span class="skill-tag" data-tooltip="Supervisión y observabilidad de sistemas y aplicaciones en producción">Monitoring</span>
-                        <span class="skill-tag" data-tooltip="Plataforma de visualización y monitoreo de métricas en tiempo real">Grafana</span>
-                        <span class="skill-tag" data-tooltip="Sistema de monitoreo y alertas de código abierto para métricas">Prometheus</span>
+                        <span class="skill-tag" data-tooltip="AWS (Lambda, RDS, S3, EC2, API Gateway)">AWS</span>
+                        <span class="skill-tag" data-tooltip="Google Cloud Platform (Cloud Run, Pub/Sub, BigQuery)">GCP</span>
+                        <span class="skill-tag" data-tooltip="Contenedores para empaquetar y desplegar aplicaciones">Docker</span>
+                        <span class="skill-tag" data-tooltip="Orquestación de contenedores a escala">Kubernetes</span>
+                        <span class="skill-tag" data-tooltip="Jenkins, GitLab CI, GitHub Actions">CI/CD</span>
+                        <span class="skill-tag" data-tooltip="Monitoreo con Grafana, Prometheus y Sentry">Observability</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-chart-line"></i> Big Data & AI</h3>
+                    <h3><i class="fas fa-chart-line" aria-hidden="true"></i> Big Data &amp; AI</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-tooltip="Framework de código abierto para procesamiento distribuido de big data">Hadoop</span>
-                        <span class="skill-tag" data-tooltip="Motor de analítica unificado para procesamiento de datos a gran escala">Apache Spark</span>
-                        <span class="skill-tag" data-tooltip="Data warehouse para consultas y análisis sobre datos en Hadoop">Hive</span>
-                        <span class="skill-tag" data-tooltip="Plataforma distribuida de streaming para procesamiento de eventos en tiempo real">Kafka</span>
-                        <span class="skill-tag" data-tooltip="Plataforma para programar, organizar y monitorear workflows de datos">Airflow</span>
-                        <span class="skill-tag" data-tooltip="Procesamiento de Lenguaje Natural para analizar y entender texto humano">NLP</span>
-                        <span class="skill-tag" data-tooltip="Framework para desarrollar aplicaciones impulsadas por modelos de lenguaje">LangChain</span>
-                        <span class="skill-tag" data-tooltip="API para integrar modelos de IA generativa como GPT en aplicaciones">OpenAI API</span>
-                        <span class="skill-tag" data-tooltip="Algoritmos que permiten a las máquinas aprender de datos sin programación explícita">Machine Learning</span>
-                        <span class="skill-tag" data-tooltip="Subconjunto de ML que usa redes neuronales profundas para patrones complejos">Deep Learning</span>
-                        <span class="skill-tag" data-tooltip="Plataforma de código abierto para machine learning y deep learning">TensorFlow</span>
-                        <span class="skill-tag" data-tooltip="Framework de deep learning con computación tensorial dinámica">PyTorch</span>
-                        <span class="skill-tag" data-tooltip="Biblioteca de machine learning simple y eficiente para Python">Scikit-learn</span>
-                        <span class="skill-tag" data-tooltip="Biblioteca de Python para manipulación y análisis de datos estructurados">Pandas</span>
-                        <span class="skill-tag" data-tooltip="Biblioteca fundamental para computación científica con arrays multidimensionales">NumPy</span>
-                        <span class="skill-tag" data-tooltip="Entorno interactivo para desarrollo y visualización de proyectos de datos">Jupyter</span>
-                        <span class="skill-tag" data-tooltip="Proceso de examinar datos para extraer insights útiles y patrones">Data Analysis</span>
-                        <span class="skill-tag" data-tooltip="Representación gráfica de datos para comunicar insights de forma clara">Data Visualization</span>
-                        <span class="skill-tag" data-tooltip="Biblioteca de Python para crear visualizaciones estáticas, animadas e interactivas">Matplotlib</span>
-                        <span class="skill-tag" data-tooltip="Biblioteca de visualización estadística basada en Matplotlib">Seaborn</span>
-                        <span class="skill-tag" data-tooltip="Extracción, Transformación y Carga de datos entre sistemas">ETL</span>
-                        <span class="skill-tag" data-tooltip="Flujos automatizados para procesar y mover datos entre sistemas">Data Pipelines</span>
-                        <span class="skill-tag" data-tooltip="Ecosistema completo de librerías Python para ciencia de datos">Python Data Stack</span>
+                        <span class="skill-tag" data-tooltip="Pipelines ETL end-to-end para grandes volúmenes">ETL / Pipelines</span>
+                        <span class="skill-tag" data-tooltip="Análisis y manipulación de datos con Python">Pandas / NumPy</span>
+                        <span class="skill-tag" data-tooltip="Motor distribuido para procesamiento de big data">PySpark</span>
+                        <span class="skill-tag" data-tooltip="Framework para aplicaciones sobre LLMs">LangChain</span>
+                        <span class="skill-tag" data-tooltip="Integración con LLMs y modelos generativos">LLMs</span>
+                        <span class="skill-tag" data-tooltip="Procesamiento de Lenguaje Natural (tesis de maestría)">NLP</span>
+                        <span class="skill-tag" data-tooltip="Machine Learning con scikit-learn y aplicaciones prácticas">Machine Learning</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-vial"></i> Testing & QA</h3>
+                    <h3><i class="fas fa-vial" aria-hidden="true"></i> Testing &amp; QA</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-tooltip="Framework de testing avanzado y fácil de usar para Python">Pytest</span>
-                        <span class="skill-tag" data-tooltip="Framework de testing para Ruby con sintaxis expresiva y legible">RSpec</span>
-                        <span class="skill-tag" data-tooltip="Suite de testing simple y rápida incluida con Ruby">Minitest</span>
-                        <span class="skill-tag" data-tooltip="Framework de testing unitario estándar incluido con Python">Unittest</span>
-                        <span class="skill-tag" data-tooltip="Framework de testing de JavaScript con enfoque en simplicidad">Jest</span>
-                        <span class="skill-tag" data-tooltip="Framework de testing end-to-end rápido y confiable para aplicaciones web">Cypress</span>
-                        <span class="skill-tag" data-tooltip="Suite de herramientas para automatizar navegadores web en testing">Selenium</span>
-                        <span class="skill-tag" data-tooltip="Plataforma para desarrollo, testing y documentación de APIs">Postman</span>
-                        <span class="skill-tag" data-tooltip="Desarrollo Dirigido por Pruebas: escribir tests antes del código">TDD</span>
-                        <span class="skill-tag" data-tooltip="Desarrollo Dirigido por Comportamiento basado en especificaciones">BDD</span>
-                        <span class="skill-tag" data-tooltip="Pruebas de unidades individuales de código de forma aislada">Unit Testing</span>
-                        <span class="skill-tag" data-tooltip="Pruebas de integración entre diferentes componentes del sistema">Integration Testing</span>
-                        <span class="skill-tag" data-tooltip="Pruebas de extremo a extremo que simulan el comportamiento del usuario">E2E Testing</span>
-                        <span class="skill-tag" data-tooltip="Verificación de funcionalidad, confiabilidad y rendimiento de APIs">API Testing</span>
-                        <span class="skill-tag" data-tooltip="Evaluación de velocidad, escalabilidad y estabilidad bajo carga">Performance Testing</span>
-                        <span class="skill-tag" data-tooltip="Pruebas para determinar el comportamiento bajo condiciones de carga esperadas">Load Testing</span>
-                        <span class="skill-tag" data-tooltip="Automatización de procesos de testing para mayor eficiencia y cobertura">Test Automation</span>
+                        <span class="skill-tag" data-tooltip="Framework de testing expresivo para Ruby">RSpec</span>
+                        <span class="skill-tag" data-tooltip="Framework de testing avanzado para Python">Pytest</span>
+                        <span class="skill-tag" data-tooltip="Suite de testing incluida con Ruby">Minitest</span>
+                        <span class="skill-tag" data-tooltip="Desarrollo Dirigido por Pruebas y Comportamiento">TDD / BDD</span>
+                        <span class="skill-tag" data-tooltip="Pruebas unitarias, de integración y E2E">Unit / Integration / E2E</span>
+                        <span class="skill-tag" data-tooltip="Política de cobertura mínima por PR">Code Review</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-sitemap"></i> Arquitectura & Metodologías</h3>
+                    <h3><i class="fas fa-sitemap" aria-hidden="true"></i> Arquitectura &amp; Liderazgo</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-tooltip="Arquitectura que separa lógica de negocio de frameworks y tecnologías">Clean Architecture</span>
-                        <span class="skill-tag" data-tooltip="Principios de diseño para software mantenible y extensible">SOLID</span>
-                        <span class="skill-tag" data-tooltip="Soluciones reutilizables a problemas comunes en diseño de software">Design Patterns</span>
-                        <span class="skill-tag" data-tooltip="Patrón Modelo-Vista-Controlador para separar lógica de presentación">MVC</span>
-                        <span class="skill-tag" data-tooltip="Patrón Modelo-Vista-Presentador para interfaces desacopladas">MVP</span>
-                        <span class="skill-tag" data-tooltip="Patrón Modelo-Vista-VistaModelo para binding bidireccional">MVVM</span>
-                        <span class="skill-tag">Microservicios</span>
-                        <span class="skill-tag" data-tooltip="Enfoque de desarrollo centrado en el dominio del negocio">Domain-Driven Design</span>
-                        <span class="skill-tag" data-tooltip="Arquitectura basada en producción y consumo de eventos">Event-Driven Architecture</span>
-                        <span class="skill-tag" data-tooltip="Segregación de Responsabilidades de Comandos y Consultas">CQRS</span>
-                        <span class="skill-tag" data-tooltip="Metodología de desarrollo iterativa y colaborativa">Agile</span>
-                        <span class="skill-tag" data-tooltip="Framework ágil con sprints, roles y ceremonias definidas">Scrum</span>
-                        <span class="skill-tag" data-tooltip="Método de gestión visual del flujo de trabajo">Kanban</span>
-                        <span class="skill-tag" data-tooltip="Cultura de colaboración entre desarrollo y operaciones">DevOps Culture</span>
-                        <span class="skill-tag" data-tooltip="Proceso de revisión de código para garantizar calidad">Code Review</span>
-                        <span class="skill-tag" data-tooltip="Liderazgo técnico y mentoría en equipos de desarrollo">Technical Leadership</span>
-                        <span class="skill-tag" data-tooltip="Diseño de arquitecturas de sistemas distribuidos y escalables">System Design</span>
-                        <span class="skill-tag" data-tooltip="Capacidad de sistemas para manejar carga creciente eficientemente">Scalability</span>
+                        <span class="skill-tag" data-tooltip="Principios SOLID aplicados en producción">SOLID</span>
+                        <span class="skill-tag" data-tooltip="Arquitectura event-driven y microservicios">Event-Driven / Microservicios</span>
+                        <span class="skill-tag" data-tooltip="Patrones de diseño aplicados al stack cotidiano">Design Patterns</span>
+                        <span class="skill-tag" data-tooltip="Diseño de sistemas distribuidos y escalables">System Design</span>
+                        <span class="skill-tag" data-tooltip="Liderazgo técnico y mentoría de juniors">Technical Leadership</span>
+                        <span class="skill-tag" data-tooltip="Agile: Scrum y Kanban con JIRA y GitFlow">Scrum / Kanban</span>
                     </div>
                 </div>
             </div>
@@ -516,7 +524,7 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Mis Servicios</h2>
+            <h2 class="section-title">Áreas de Expertise</h2>
             <div class="services-grid">
                 
                 <!-- Backend Development -->
@@ -635,7 +643,7 @@
                         <i class="fas fa-network-wired"></i>
                     </div>
                     <h3>Integración de Sistemas</h3>
-                    <p>Conecta y automatiza tus sistemas empresariales</p>
+                    <p>Integración y automatización de sistemas empresariales</p>
                     <ul class="service-features">
                         <li><i class="fas fa-check"></i> APIs de integración</li>
                         <li><i class="fas fa-check"></i> ETL/ELT pipelines</li>
@@ -651,12 +659,6 @@
                     </div>
                 </div>
 
-            </div>
-            <div class="services-cta">
-                <a href="servicios.html" class="btn btn-primary">
-                    <i class="fas fa-arrow-right"></i>
-                    Ver Detalles de Servicios
-                </a>
             </div>
         </div>
     </section>

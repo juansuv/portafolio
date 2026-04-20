@@ -552,41 +552,44 @@ function initializeMagneticButtons() {
 // Counter animation for stats
 function animateCounters() {
     const counters = document.querySelectorAll('.stat-number');
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const counter = entry.target;
-                const target = parseInt(counter.textContent.replace(/\D/g, ''));
-                const suffix = counter.textContent.replace(/\d/g, '');
-                
-                animateCounter(counter, 0, target, 2000, suffix);
+                const match = counter.textContent.match(/^(\D*)(\d+)(\D*)$/);
+                if (match) {
+                    const prefix = match[1];
+                    const target = parseInt(match[2], 10);
+                    const suffix = match[3];
+                    animateCounter(counter, 0, target, 2000, prefix, suffix);
+                }
                 observer.unobserve(counter);
             }
         });
     }, { threshold: 0.5 });
-    
+
     counters.forEach(counter => observer.observe(counter));
 }
 
 // Counter animation function
-function animateCounter(element, start, end, duration, suffix) {
+function animateCounter(element, start, end, duration, prefix, suffix) {
     const startTime = performance.now();
-    
+
     function updateCounter(currentTime) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        
+
         // Easing function
         const easeOutCubic = 1 - Math.pow(1 - progress, 3);
         const current = Math.floor(start + (end - start) * easeOutCubic);
-        
-        element.textContent = current + suffix;
-        
+
+        element.textContent = prefix + current + suffix;
+
         if (progress < 1) {
             requestAnimationFrame(updateCounter);
         } else {
-            element.textContent = end + suffix;
+            element.textContent = prefix + end + suffix;
         }
     }
     
